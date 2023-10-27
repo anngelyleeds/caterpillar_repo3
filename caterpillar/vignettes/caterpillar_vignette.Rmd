@@ -1,0 +1,40 @@
+---
+title: "caterpillar_vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{caterpillar_vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+**caterpillar** is a package that enables you to perform various helpful functions to
+caterpillar performance data.
+
+Load the package.
+```{r setup}
+library(caterpillar)
+```
+Load the associated data (**caterpillar_survival**).
+```{r}
+data("caterpillar_survival")
+```
+You can use **avg_mass** to find the average mass change of a single caterpillar in a container across 2 to 3 given days.
+```{r}
+avg_mass(caterpillar_survival$alive_1, caterpillar_survival$mass_1, caterpillar_survival$alive_2, caterpillar_survival$mass_2)
+```
+You can use **avg_survival** to find the avergae survival of a given container across 2 or 3 stress exposures. 
+```{r}
+avg_survival(caterpillar_survival$alive_1, caterpillar_survival$alive_2)
+```
+You can use **development_time** to find the average number of days between instars across 2 to 4 instars. 
+```{r}
+development_time(caterpillar_survival$hatch_date, caterpillar_survival$instar2, caterpillar_survival$instar3)
+```
+
+Have fun!

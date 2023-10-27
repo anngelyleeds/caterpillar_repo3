@@ -1,0 +1,18 @@
+Package: caterpillar
+Title: Helpful Functions for Caterpillar Performance Data
+Version: 0.0.0.9000
+Authors@R: 
+    person("Anngely", "Leeds", , "acl154@georgetown.edu", role = c("aut", "cre"))
+Description: This package contains helpful functions for caterpillar performance data including: larval mass, survival, and development rate.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Depends: 
+    R (>= 2.10)
+LazyData: true
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
