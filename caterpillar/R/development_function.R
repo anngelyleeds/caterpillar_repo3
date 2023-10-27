@@ -10,9 +10,9 @@
 development_time <- function(day1, day2, day3, day4){
   if (missing(day4)){
     d_time <- (difftime(day3, day1, unit="days"))/3
-  } else if (missing(day3)){
+  } else if ((missing(day3)) && (missing(day4))){
     d_time <- (difftime(day2, day1, unit="days"))/2
-  } else if (missing(day2)){
+  } else if ((missing(day2)) && (missing(day3)) && (missing(day(4)))){
     d_time <- 0
   } else {
     d_time <- (difftime(day4, day1, unit="days"))/4
